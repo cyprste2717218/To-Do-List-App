@@ -20,7 +20,7 @@ const Footer = ({allToDos, setAllToDos, sortStatus, setSortStatus}) => {
                     setAllToDos={setAllToDos}
                     allToDos={allToDos}
                 />
-                <br></br>
+                <br />
                 <SortingByCompletionButton
                     setSortStatus={setSortStatus}
                     sortStatus={sortStatus}

@@ -1,6 +1,3 @@
-import {faCircle} from '@fortawesome/free-regular-svg-icons';
-import {faCircleCheck} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import React, {useState} from 'react';
 
 import handleToDoContentChange from '../utilities/changingToDoMethods';
