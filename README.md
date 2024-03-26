@@ -9,7 +9,7 @@ A web-based To-Do List App List written in React which can save and order list i
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
+- [License](https://github.com/cyprste2717218/To-Do-List-App?tab=MIT-1-ov-file)
 
 ## Prequisites
 
