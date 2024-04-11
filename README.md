@@ -40,4 +40,6 @@ To use the To-Do-List app, simply:
 You can also delete individual To-Dos by pressing the bin icon next to any To-Do
 
 
-**Note:** Make sure no other application is utilisng localStorage browser API during use, otherwise the app will experience runtime errors
+**Note:** 
+Make sure no other application is utilising localStorage browser API during use, otherwise the app will experience runtime errors.
+If the app doesn't load try clearing the browser's local storage by running ```localStorage.clear()``` in your browser's console
