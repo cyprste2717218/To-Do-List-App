@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
-. "${0%/*}/h"
+. "${0%/*}/_/h"
 
-npx xo $(git ls-files src/**/*.{js,jsx} src/components/**/*.{js,jsx} src/utilities/**/*.{js,jsx} src/App.js)
+npx xo src/**/*.{js,jsx} src/components/**/*.{js,jsx} src/utilities/**/*.{js,jsx} src/App.js
