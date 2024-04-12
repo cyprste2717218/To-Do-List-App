@@ -22,6 +22,7 @@
     "test": "xo && react-scripts test",
     "test1": "xo src/components/ToDoListGroup.js",
     "eject": "react-scripts eject",
+    "lint": "npx xo src/**/*.{js,jsx} src/components/**/*.{js,jsx} src/utilities/**/*.{js,jsx} src/App.js",
     "prepare": "husky"
   },
   "eslintConfig": {
