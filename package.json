@@ -23,6 +23,11 @@
     "test1": "xo src/components/ToDoListGroup.js",
     "eject": "react-scripts eject"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
