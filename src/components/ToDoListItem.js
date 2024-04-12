@@ -32,7 +32,7 @@ const ToDoListItem = ({
                 <div style={{width: '75%'}}>
                     <label htmlFor={`text${itemKey}`} />
                     <input
-                        style={{padding: '10px'}}
+                        style={{width: '100%', padding: '10px'}}
                         id={`text${itemKey}`}
                         type='text' value={itemText} onChange={e => handleToDoContentChange(
                     e.target.value, itemKey, setItemText, setChangedToDoItem, setToDoChecked)}
