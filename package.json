@@ -21,7 +21,8 @@
     "build": "react-scripts build",
     "test": "xo && react-scripts test",
     "test1": "xo src/components/ToDoListGroup.js",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +49,7 @@
     "eslint-config-xo-react": "^0.27.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^9.0.11",
     "xo": "^0.56.0"
   }
 }
