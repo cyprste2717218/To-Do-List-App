@@ -1,4 +1,2 @@
-#!/usr/bin/env sh
-. "${0%/*}/_/h"
-
+echo "pre-commit hook started (husky)"
 npx xo src/**/*.{js,jsx} src/components/**/*.{js,jsx} src/utilities/**/*.{js,jsx} src/App.js
