@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 
 import handleToDoContentChange from '../utilities/changingToDoMethods';
 
+import CustomCheckBox from './CustomCheckbox';
 import DeleteButton from './DeleteButton';
 
 const ToDoListItem = ({
@@ -21,13 +22,15 @@ const ToDoListItem = ({
             <span key={itemKey} style={{marginTop: 'auto', marginBottom: 'auto', flexDirection: 'row', display: 'flex'}}>
 
                 <div style={{marginTop: 'auto', marginBottom: 'auto', width: '15%'}}>
-                    <label htmlFor={`check${itemKey}`} />
-                    <input
-                        style={{height: '25px', width: '25px'}}
-                        id={`check${itemKey}`}
-                        type='checkbox' checked={toDoChecked} onChange={e => handleToDoContentChange(
-                    e.target.checked, itemKey, setItemText, setChangedToDoItem, setToDoChecked)}
-                    />
+                    <div style={{display: 'flex', justifyContent: 'center'}}>
+                        <CustomCheckBox
+                            toDoChecked={toDoChecked}
+                            itemKey={itemKey}
+                            setChangedToDoItem={setChangedToDoItem}
+                            setToDoChecked={setToDoChecked}
+                            setItemText={setItemText}
+                        />
+                    </div>
                 </div>
                 <div style={{width: '75%'}}>
                     <label htmlFor={`text${itemKey}`} />
