@@ -1,4 +1,4 @@
-import {faCircleCheck as unFilledCheckBox} from '@fortawesome/free-regular-svg-icons';
+import {faCircle as unFilledCheckBox} from '@fortawesome/free-regular-svg-icons';
 import {faCircleCheck as filledCheckBox} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import React from 'react';
@@ -20,7 +20,7 @@ const CustomCheckBox = ({toDoChecked, itemKey, setChangedToDoItem, setToDoChecke
             style={{backgroundColor: '#fff', border: '1px solid #fff'}}
             onClick={handleClick}
         >
-            <FontAwesomeIcon size='lg' style={{fontSize: '2rem'}} icon={toDoChecked ? filledCheckBox : unFilledCheckBox} />
+            <FontAwesomeIcon size='lg' style={{fontSize: '1.7rem'}} icon={toDoChecked ? filledCheckBox : unFilledCheckBox} />
 
         </button>
 
