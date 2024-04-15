@@ -18,7 +18,7 @@ const ToDoListItem = ({
     const [toDoChecked, setToDoChecked] = useState(checkbox);
 
     return (
-        <div style={{width: '100%', border: '1px solid gray', borderRadius: '10px', display: 'flex', padding: '10px'}}>
+        <div style={{width: '100%', borderRadius: '10px', display: 'flex', padding: '10px', boxShadow: '0px 1px 5px rgba(0, 0, 0, 0.3)'}}>
             <span key={itemKey} style={{marginTop: 'auto', marginBottom: 'auto', flexDirection: 'row', display: 'flex', width: '100%'}}>
 
                 <div style={{marginTop: 'auto', marginBottom: 'auto', width: '15%'}}>
