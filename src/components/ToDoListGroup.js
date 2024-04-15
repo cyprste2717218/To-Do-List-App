@@ -24,7 +24,7 @@ const ToDoListGroup = ({
 
     return (
         <div style={{display: 'flex', justifyContent: 'center', height: 'calc(100vh - 300px)', overflowY: 'scroll'}}>
-            <div id='to-do-group-div'>
+            <div id='to-do-group-div' style={{width: '80vw'}}>
                 {newKeys.map(index => {
               return (
                   <ToDoListItem
@@ -40,7 +40,6 @@ const ToDoListGroup = ({
           })}
             </div>
         </div>
-
     );
   };
 

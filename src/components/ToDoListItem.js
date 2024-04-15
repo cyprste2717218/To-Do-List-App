@@ -18,8 +18,8 @@ const ToDoListItem = ({
     const [toDoChecked, setToDoChecked] = useState(checkbox);
 
     return (
-        <div style={{width: '88vw', border: '1px solid gray', borderRadius: '16px', display: 'flex', padding: '10px'}}>
-            <span key={itemKey} style={{marginTop: 'auto', marginBottom: 'auto', flexDirection: 'row', display: 'flex'}}>
+        <div style={{width: '100%', border: '1px solid gray', borderRadius: '10px', display: 'flex', padding: '10px'}}>
+            <span key={itemKey} style={{marginTop: 'auto', marginBottom: 'auto', flexDirection: 'row', display: 'flex', width: '100%'}}>
 
                 <div style={{marginTop: 'auto', marginBottom: 'auto', width: '15%'}}>
                     <div style={{display: 'flex', justifyContent: 'center'}}>
@@ -35,14 +35,15 @@ const ToDoListItem = ({
                 <div style={{width: '75%'}}>
                     <label htmlFor={`text${itemKey}`} />
                     <input
-                        style={{width: '100%', padding: '10px'}}
+                        style={{width: '100%', padding: '10px', border: '1px solid #fff'}}
                         id={`text${itemKey}`}
-                        type='text' value={itemText} onChange={e => handleToDoContentChange(
+                        type='text' value={itemText} placeholder='Enter to-do here'
+                        onChange={e => handleToDoContentChange(
                     e.target.value, itemKey, setItemText, setChangedToDoItem, setToDoChecked)}
                     />
                 </div>
 
-                <div style={{marginTop: 'auto', marginBottom: 'auto', width: '10%'}}>
+                <div style={{marginTop: 'auto', marginBottom: 'auto', width: '10%', marginLeft: '40px'}}>
                     <DeleteButton
                         allToDos={allToDos}
                         setAllToDos={setAllToDos}
