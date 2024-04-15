@@ -20,7 +20,7 @@ const CustomCheckBox = ({toDoChecked, itemKey, setChangedToDoItem, setToDoChecke
             style={{backgroundColor: '#fff', border: '1px solid #fff'}}
             onClick={handleClick}
         >
-            <FontAwesomeIcon size='lg' style={{fontSize: '1.7rem'}} icon={toDoChecked ? filledCheckBox : unFilledCheckBox} />
+            <FontAwesomeIcon size='lg' style={{fontSize: '2rem', color: '#ADD8E6'}} icon={toDoChecked ? filledCheckBox : unFilledCheckBox} />
 
         </button>
 
