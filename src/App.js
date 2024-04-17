@@ -44,10 +44,12 @@ const ToDoApp = () => {
                     <Offcanvas.Title>Options</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
+                    <br></br>
                    <DeleteAllToDosButton
                      setAllToDos={setAllToDos}
                      allToDos={allToDos}
                    />
+                   <br></br>
                    <SortingByCompletionButton
                     setSortStatus={setSortStatus}
                     sortStatus={sortStatus}
