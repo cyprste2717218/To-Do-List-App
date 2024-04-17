@@ -9,6 +9,8 @@ import Footer from './components/Footer.js';
 import Header from './components/Header.js';
 import ToDoListGroup from './components/ToDoListGroup.js';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import DeleteAllToDosButton from './components/DeleteAllToDosButton.js';
+import SortingByCompletionButton from './components/SortingByCompletionButton.js';
 
 const ToDoApp = () => {
   const [allToDos, setAllToDos] = useState(localStorage);
@@ -39,10 +41,17 @@ const ToDoApp = () => {
           </div>
           <Offcanvas show={show} onHide={handleClose} placement='bottom' style={{borderRadius: '20px 20px 0 0'}}> 
                 <Offcanvas.Header closeButton>
-                    <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+                    <Offcanvas.Title>Options</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                   ddd
+                   <DeleteAllToDosButton
+                     setAllToDos={setAllToDos}
+                     allToDos={allToDos}
+                   />
+                   <SortingByCompletionButton
+                    setSortStatus={setSortStatus}
+                    sortStatus={sortStatus}
+                   />
                 </Offcanvas.Body>
             </Offcanvas>
     </>
