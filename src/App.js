@@ -37,7 +37,7 @@ const ToDoApp = () => {
 
                 />
           </div>
-          <Offcanvas show={show} onHide={handleClose} placement='bottom'>
+          <Offcanvas show={show} onHide={handleClose} placement='bottom' style={{borderRadius: '20px 20px 0 0'}}> 
                 <Offcanvas.Header closeButton>
                     <Offcanvas.Title>Offcanvas</Offcanvas.Title>
                 </Offcanvas.Header>
