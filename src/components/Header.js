@@ -2,7 +2,7 @@ import React from 'react';
 
 import MoreOptionsButton from './MoreOptionsButton';
 
-const Header = () => {
+const Header = ({handleShow}) => {
     return (
         <div style={{
             width: '100vw', height: '100px', backgroundColor: '#ADD8E6',
@@ -18,7 +18,7 @@ const Header = () => {
             </div>
             <div style={{width: '20vw', display: 'flex', justifyContent: 'center'}}>
                 <div style={{marginTop: 'auto', marginBottom: 'auto'}}>
-                    <MoreOptionsButton />
+                    <MoreOptionsButton handleShow={handleShow} />
                 </div>
 
             </div>
