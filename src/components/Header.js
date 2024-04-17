@@ -1,16 +1,27 @@
 import React from 'react';
 
+import MoreOptionsButton from './MoreOptionsButton';
+
 const Header = () => {
     return (
         <div style={{
-            width: '100%', height: '100px', backgroundColor: '#ADD8E6', color: 'white',
-            display: 'flex', justifyContent: 'center', position: 'sticky', top: '0'
+            width: '100vw', height: '100px', backgroundColor: '#ADD8E6', color: 'white',
+            display: 'flex', flexDirection: 'row', position: 'sticky', top: '0'
       }}
         >
-            <span>
 
-                <h1>To-Do List App</h1>
-            </span>
+            <div style={{display: 'flex', justifyContent: 'left', width: '80vw', paddingLeft: '30px'}}>
+                <div style={{marginTop: 'auto', marginBottom: 'auto'}}>
+                    <h1>To-Do List App</h1>
+                </div>
+
+            </div>
+            <div style={{width: '20vw', display: 'flex', justifyContent: 'center'}}>
+                <div style={{marginTop: 'auto', marginBottom: 'auto'}}>
+                    <MoreOptionsButton />
+                </div>
+
+            </div>
 
         </div>
 

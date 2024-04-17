@@ -7,7 +7,7 @@ const MoreOptionsButton = () => {
 
 	return (
     <div>
-        <FontAwesomeIcon icon={faEllipsisVertical} />
+        <FontAwesomeIcon icon={faEllipsisVertical} size='xl' style={{fontSize: '2rem'}} />
     </div>
 	);
 };
