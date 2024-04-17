@@ -12,7 +12,7 @@ const Header = ({handleShow}) => {
 
             <div style={{display: 'flex', justifyContent: 'left', width: '80vw', paddingLeft: '30px', color: '#fff'}}>
                 <div style={{marginTop: 'auto', marginBottom: 'auto'}}>
-                    <h1>To-Do List App</h1>
+                    <h1>To-Dos</h1>
                 </div>
 
             </div>
