@@ -28,7 +28,7 @@ h1 {
 #addToDoButton:hover {
     background-color: #c8c8c8;
     color: white;
-
+    border: 0px solid;
 }
 
 #deleteAllToDosButton {
