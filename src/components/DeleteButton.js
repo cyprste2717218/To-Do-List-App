@@ -7,7 +7,7 @@ import deleteToDo from '../utilities/deleteToDo';
 const DeleteButton = ({allToDos, setAllToDos, itemKey}) => {
     return (
 
-        <span style={{marginLeft: '5px'}} onClick={() => deleteToDo(allToDos, setAllToDos, itemKey)}>
+        <span style={{width: '100%', marginLeft: '5px'}} onClick={() => deleteToDo(allToDos, setAllToDos, itemKey)}>
             <FontAwesomeIcon className='deleteIcon' icon={faTrash} size='lg' />
         </span>
 
