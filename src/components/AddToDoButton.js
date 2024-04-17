@@ -15,7 +15,10 @@ const AddToDoButton = ({
                 type='submit' onClick={() =>
           createNewToDoItem(onNewToDoItem, allToDos)}
             >
-                <FontAwesomeIcon icon={faPlus} />
+                <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
+                    <FontAwesomeIcon size='xl' icon={faPlus} />
+                </div>
+
             </button>
 
         </div>
