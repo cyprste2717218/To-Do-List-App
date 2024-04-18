@@ -3,14 +3,14 @@ import React, {useState} from 'react';
 import './styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import Offcanvas from 'react-bootstrap/Offcanvas';
 
-
+import DeleteAllToDosButton from './components/DeleteAllToDosButton.js';
 import Footer from './components/Footer.js';
 import Header from './components/Header.js';
-import ToDoListGroup from './components/ToDoListGroup.js';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import DeleteAllToDosButton from './components/DeleteAllToDosButton.js';
 import SortingByCompletionButton from './components/SortingByCompletionButton.js';
+import ToDoListGroup from './components/ToDoListGroup.js';
+import checkAndClearLocalStorage from './utilities/checkClearLocalStorage.js';
 
 const ToDoApp = () => {
   const [allToDos, setAllToDos] = useState(localStorage);
@@ -19,11 +19,11 @@ const ToDoApp = () => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  checkAndClearLocalStorage();
   return (
       <>
           <Header handleShow={handleShow} />
-           
+
           <ToDoListGroup
               allToDos={allToDos}
               setAllToDos={setAllToDos}
@@ -39,24 +39,24 @@ const ToDoApp = () => {
 
                 />
           </div>
-          <Offcanvas show={show} onHide={handleClose} placement='bottom' style={{borderRadius: '20px 20px 0 0'}}> 
-                <Offcanvas.Header closeButton>
-                    <Offcanvas.Title>Options</Offcanvas.Title>
-                </Offcanvas.Header>
-                <Offcanvas.Body>
-                    <br></br>
-                   <DeleteAllToDosButton
-                     setAllToDos={setAllToDos}
-                     allToDos={allToDos}
+          <Offcanvas show={show} placement='bottom' style={{borderRadius: '20px 20px 0 0'}} onHide={handleClose}>
+              <Offcanvas.Header closeButton={true}>
+                  <Offcanvas.Title>Options</Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                  <br />
+                  <DeleteAllToDosButton
+                      setAllToDos={setAllToDos}
+                      allToDos={allToDos}
                    />
-                   <br></br>
-                   <SortingByCompletionButton
-                    setSortStatus={setSortStatus}
-                    sortStatus={sortStatus}
+                  <br />
+                  <SortingByCompletionButton
+                      setSortStatus={setSortStatus}
+                      sortStatus={sortStatus}
                    />
-                </Offcanvas.Body>
-            </Offcanvas>
-    </>
+              </Offcanvas.Body>
+          </Offcanvas>
+      </>
   );
 };
 

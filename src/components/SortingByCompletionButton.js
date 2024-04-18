@@ -1,5 +1,5 @@
 import React from 'react';
-import Switch from "react-switch";
+import Switch from 'react-switch';
 
 const SortingByCompletionButton = ({sortStatus, setSortStatus}) => {
     return (
@@ -10,11 +10,10 @@ const SortingByCompletionButton = ({sortStatus, setSortStatus}) => {
                     <div style={{marginTop: 'auto', marginBottom: 'auto', paddingTop: '10px', paddingLeft: '10px'}}>
                         <Switch checked={sortStatus} onChange={e => setSortStatus(e)} />
                     </div>
-               
-                 </div>
+
+                </div>
             </label>
-          
-           
+
         </div>
 
     );

@@ -7,7 +7,8 @@ import deleteAllToDos from '../utilities/deleteAllToDos';
 const DeleteAllToDosButton = ({setAllToDos, allToDos}) => {
     return (
         <div>
-            <button id='deleteAllToDosButton' type='submit' onClick={() => deleteAllToDos(setAllToDos, allToDos)}>
+
+            <button style={{color: '#000'}} id='deleteAllToDosButton' type='submit' onClick={() => deleteAllToDos(setAllToDos, allToDos)}>
                 Delete All To-Dos
                 <FontAwesomeIcon style={{marginLeft: '10px'}} icon={faDumpster} size='lg' />
             </button>
