@@ -1,8 +1,9 @@
 # To-Do List App
 A web-based To-Do List App List written in React which can save and order list items which persist between browser sessions.
 
-<div align='center'>
-  <img src="https://github.com/cyprste2717218/To-Do-List-App/blob/main/image/screenshot.png" alt="Screenshot of To-Do List Web app on mobile viewport"/>
+<div align='center' >
+  <img src="./image/screenshot1.jpg" alt="Screenshot of To-Do List Web app on mobile viewport"/>
+  <img src="./image/screenshot2.jpg" alt="Screenshot of To-Do List Web app options modal on mobile viewport"/>
 </div>
 
 ## Table of Contents
