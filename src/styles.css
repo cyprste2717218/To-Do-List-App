@@ -32,6 +32,7 @@ h1 {
 }
 
 #deleteAllToDosButton {
+    width: 90vw;
     background-color: white;
     border: 0px solid;
     padding: 17px;
@@ -68,7 +69,7 @@ h1 {
     justify-content: center;
     flex-direction: row;
     background-color: white;
-    width: 190px;
+    width:90vw;
     height: 60px;
     border-radius: 30px;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3)
