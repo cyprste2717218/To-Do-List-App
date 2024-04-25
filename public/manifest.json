@@ -4,9 +4,9 @@
   "description": "A To-Do List App which can save and order list items which persist between browser sessions",
   "icons": [
     {
-      "src": "logo.svg",
-      "type": "image/svg+xml",
-      "sizes": "144x144",
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon",
       "purpose": "any"
     },
     {
@@ -22,20 +22,32 @@
   ],
   "start_url": ".",
   "display": "fullscreen",
-  "theme_color": "#74C0FC",
+  "theme_color": "#ffffff",
   "background_color": "#ffffff",
   "screenshots": [
     {
-      "src": "screenshot1.jpg",
+      "src": "images/home-mobile.jpg",
       "type": "image/jpg",
       "sizes": "828x1440",
       "form_factor": "narrow"
     },
     {
-      "src": "screenshot2.jpg",
+      "src": "images/options-mobile.jpg",
       "type": "image/jpg",
       "sizes": "828x1440",
       "form_factor": "narrow"
+    },
+    {
+      "src": "images/home-desktop.png",
+      "type": "image/jpg",
+      "sizes": "1545x1068",
+      "form_factor": "wide"
+    },
+    {
+      "src": "images/options-desktop.png",
+      "type": "image/jpg",
+      "sizes": "1545x1068",
+      "form_factor": "wide"
     }
   ]
 }
