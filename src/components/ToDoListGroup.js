@@ -23,7 +23,7 @@ const ToDoListGroup = ({
   }
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', height: 'calc(100vh - 100px)', overflowY: 'scroll' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', height: 'calc(100vh - 280px)', overflowY: 'scroll' }}>
       <div id='to-do-group-div' style={{ width: '80vw' }}>
         <br></br>
         {newKeys.map(index => {
