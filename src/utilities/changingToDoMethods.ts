@@ -1,5 +1,16 @@
+type ChangeToDoItemType = {
+	data: string | boolean;
+	setChangedToDoItem: Function;
+}
 
-export default function handleToDoContentChange(data, itemKey, setItemText, setChangedToDoItem, setToDoChecked) { // Issue with using data from updated state values , doesn't transmit all data for strings and sends on wrong checkbox value
+type ContentChangeType = {
+	data: string | boolean;
+	itemKey: string;
+	setItemText: Function;
+	setToDoChecked: Function;
+} & ChangeToDoItemType;
+
+export default function handleToDoContentChange({ data, itemKey, setItemText, setChangedToDoItem, setToDoChecked }: ContentChangeType) { // Issue with using data from updated state values , doesn't transmit all data for strings and sends on wrong checkbox value
 	if (typeof (data) === 'string') {
 		setItemText(data);
 		changeToDoItem([data, itemKey, 'string'], setChangedToDoItem);
@@ -9,7 +20,7 @@ export default function handleToDoContentChange(data, itemKey, setItemText, setC
 	}
 }
 
-export function changeToDoItem(data, setChangedToDoItem) {
+export function changeToDoItem({ data, setChangedToDoItem }: ChangeToDoItemType) {
 	const [givenVal, itemKey, dataType] = data;
 
 	const currentValue = localStorage.getItem(itemKey);
@@ -25,7 +36,7 @@ export function changeToDoItem(data, setChangedToDoItem) {
 	updatedToDo[itemKey] = JSON.stringify(updatedToDoItemArr);
 	localStorage.setItem(itemKey, updatedToDo[itemKey]);
 
-	const updatedLocalStorage = {...localStorage};
+	const updatedLocalStorage = { ...localStorage };
 
 	return setChangedToDoItem(updatedLocalStorage);
 	// Test: console.log("Copy all to dos after:", copyAllToDos[itemKey]);
