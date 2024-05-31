@@ -1,6 +1,6 @@
 import React from 'react';
 
-import AddToDoButton from './AddToDoButton';
+import AddToDoButton from './AddToDoButton.tsx';
 
 const Footer = ({ allToDos, setAllToDos }) => {
     return (

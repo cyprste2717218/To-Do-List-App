@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/components/**/*.ts",
+    "src/components/**/*.tsx",
+    "src/models/**/*.ts",
+    "src/models/**/*.tsx",
+    "src/utilities/**/*.ts",
+    "src/utilities/**/*.tsx"
+  ],
+  "outDir": "./dist",
+}

@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "tsc",
     "eject": "react-scripts eject",
     "prepare": "husky"
   },
@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
-    "husky": "^9.0.11"
+    "husky": "^9.0.11",
+    "typescript": "^5.4.5"
   }
 }
