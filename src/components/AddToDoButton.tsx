@@ -2,15 +2,17 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
-import createNewToDoItem from '../utilities/createNewToDoItem';
+import createNewToDoItem from '../utilities/createNewToDoItem.ts';
+
+type AddToDoButtonType = {
+  onNewToDoItem: React.SetStateAction<Object>;
+  allToDos: Object;
+}
 
 const AddToDoButton = ({
   onNewToDoItem,
   allToDos
-}: {
-  onNewToDoItem: (newToDoItem: any) => void;
-  allToDos: any;
-}) => {
+}: AddToDoButtonType) => {
   return (
     <div >
       <button

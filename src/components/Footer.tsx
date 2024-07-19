@@ -2,7 +2,12 @@ import React from 'react';
 
 import AddToDoButton from './AddToDoButton.tsx';
 
-const Footer = ({ allToDos, setAllToDos }) => {
+type FooterType = {
+    allToDos: Object;
+    setAllToDos: React.SetStateAction<Object>;
+}
+
+const Footer = ({ allToDos, setAllToDos }: FooterType) => {
     return (
         <div id='footer'>
             <div style={{ display: 'flex', justifyContent: 'right', paddingRight: '20px', paddingTop: '0px' }}>

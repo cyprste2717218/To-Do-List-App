@@ -1,13 +1,19 @@
 import React from 'react';
+import ToDoListItem from './ToDoListItem.tsx';
 
-import ToDoListItem from './ToDoListItem';
+type ToDoListGroupType = {
+  allToDos: Object,
+  setAllToDos: React.SetStateAction<Object>,
+  onUpdatedToDoItem: React.SetStateAction<Object>,
+  sortStatus: boolean
+}
 
 const ToDoListGroup = ({
   allToDos,
   setAllToDos,
   onUpdatedToDoItem,
   sortStatus
-}) => {
+}: ToDoListGroupType) => {
   const allKeys = Object.keys(localStorage);
   const orderedKeys = allKeys.map(num => Number.parseInt(num, 10)).sort((a, b) => a - b);
   let newKeys = [];

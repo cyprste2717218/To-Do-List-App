@@ -6,8 +6,8 @@ type ChangeToDoItemType = {
 type ContentChangeType = {
 	data: string | boolean;
 	itemKey: string;
-	setItemText: Function;
-	setToDoChecked: Function;
+	setItemText: React.SetStateAction<string>;
+	setToDoChecked: React.SetStateAction<boolean>;
 } & ChangeToDoItemType;
 
 export default function handleToDoContentChange({ data, itemKey, setItemText, setChangedToDoItem, setToDoChecked }: ContentChangeType) { // Issue with using data from updated state values , doesn't transmit all data for strings and sends on wrong checkbox value
@@ -21,7 +21,7 @@ export default function handleToDoContentChange({ data, itemKey, setItemText, se
 }
 
 export function changeToDoItem({ data, setChangedToDoItem }: ChangeToDoItemType) {
-	const [givenVal, itemKey, dataType] = data;
+	const [givenVal, itemKey, dataType]:  = data;
 
 	const currentValue = localStorage.getItem(itemKey);
 	const updatedToDoItemArr = JSON.parse(currentValue);

@@ -5,7 +5,15 @@ import React from 'react';
 
 import handleToDoContentChange from '../utilities/changingToDoMethods.ts';
 
-const CustomCheckBox = ({ toDoChecked, itemKey, setChangedToDoItem, setToDoChecked, setItemText }) => {
+type CustomCheckBoxType = {
+    toDoChecked: boolean;
+    itemKey: number;
+    setChangedToDoItem: (itemKey: number, itemText: string) => void;
+    setToDoChecked: (toDoChecked: boolean) => void;
+    setItemText: (itemText: string) => void;
+}
+
+const CustomCheckBox = ({ toDoChecked, itemKey, setChangedToDoItem, setToDoChecked, setItemText }: CustomCheckBoxType) => {
     const handleClick = () => {
         setToDoChecked(!toDoChecked);
         handleToDoContentChange(!toDoChecked, itemKey, setItemText, setChangedToDoItem, setToDoChecked);

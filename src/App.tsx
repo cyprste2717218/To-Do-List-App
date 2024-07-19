@@ -5,12 +5,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
-import DeleteAllToDosButton from './components/DeleteAllToDosButton.js';
-import Footer from './components/Footer.js';
-import Header from './components/Header.js';
-import SortingByCompletionButton from './components/SortingByCompletionButton.js';
-import ToDoListGroup from './components/ToDoListGroup.js';
-import checkAndClearLocalStorage from './utilities/checkClearLocalStorage.js';
+import DeleteAllToDosButton from './components/DeleteAllToDosButton.tsx';
+import Footer from './components/Footer.tsx';
+import Header from './components/Header.tsx';
+import SortingByCompletionButton from './components/SortingByCompletionButton.tsx';
+import ToDoListGroup from './components/ToDoListGroup.tsx';
+import checkAndClearLocalStorage from './utilities/checkClearLocalStorage.ts';
 
 const ToDoApp = () => {
     const [allToDos, setAllToDos] = useState<Object>(localStorage);

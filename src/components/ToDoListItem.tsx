@@ -2,8 +2,17 @@ import React, { useState } from 'react';
 
 import handleToDoContentChange from '../utilities/changingToDoMethods.ts';
 
-import CustomCheckBox from './CustomCheckbox';
-import DeleteButton from './DeleteButton';
+import CustomCheckBox from './CustomCheckbox.tsx';
+import DeleteButton from './DeleteButton.tsx';
+
+type ToDoListItemType = {
+    setChangedToDoItem: Function,
+    itemKey: number,
+    text: string,
+    checkbox: boolean,
+    allToDos: any,
+    setAllToDos: Function
+}
 
 const ToDoListItem = ({
     setChangedToDoItem,
@@ -13,7 +22,7 @@ const ToDoListItem = ({
     allToDos,
     setAllToDos
 
-}) => {
+}: ToDoListItemType) => {
     const [itemText, setItemText] = useState(text);
     const [toDoChecked, setToDoChecked] = useState(checkbox);
 
