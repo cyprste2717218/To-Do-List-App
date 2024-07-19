@@ -1,5 +1,10 @@
 
 export default function handleToDoContentChange(data, itemKey, setItemText, setChangedToDoItem, setToDoChecked) { // Issue with using data from updated state values , doesn't transmit all data for strings and sends on wrong checkbox value
+
+	if (data.length === 15) {
+		setItemText(data + '//n');
+	}
+
 	if (typeof (data) === 'string') {
 		setItemText(data);
 		changeToDoItem([data, itemKey, 'string'], setChangedToDoItem);
