@@ -4,7 +4,7 @@ import MoreOptionsButton from './MoreOptionsButton';
 
 const Header = ({handleShow}) => {
     return (
-        <div style={{
+        <div data-test='to-do-app-header' style={{
             width: '100vw', height: '100px', backgroundColor: '#ADD8E6',
             display: 'flex', flexDirection: 'row', position: 'sticky', top: '0'
       }}

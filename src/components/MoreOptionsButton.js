@@ -4,7 +4,7 @@ import React from 'react';
 
 const MoreOptionsButton = ({handleShow}) => {
 	return (
-    <div>
+    <div data-test='more-options-elipsis-button'>
         <button
             id='moreOptionsButton'
             type='button'
