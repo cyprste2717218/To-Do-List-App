@@ -18,7 +18,7 @@ const ToDoListItem = ({
     const [toDoChecked, setToDoChecked] = useState(checkbox);
 
     return (
-        <div style={{width: '100%', borderRadius: '10px', display: 'flex', padding: '10px', boxShadow: '0px 1px 5px rgba(0, 0, 0, 0.3)'}}>
+        <div data-test='to-do-list-item' style={{width: '100%', borderRadius: '10px', display: 'flex', padding: '10px', boxShadow: '0px 1px 5px rgba(0, 0, 0, 0.3)'}}>
             <span key={itemKey} style={{marginTop: 'auto', marginBottom: 'auto', flexDirection: 'row', display: 'flex', width: '100%'}}>
 
                 <div style={{marginTop: 'auto', marginBottom: 'auto', width: '15%'}}>
@@ -35,6 +35,7 @@ const ToDoListItem = ({
                 <div style={{width: '75%'}}>
                     <label htmlFor={`text${itemKey}`} />
                     <input
+                        data-test='to-do-list-item-text-box'
                         style={{width: '100%', padding: '10px', border: '1px solid #fff'}}
                         id={`text${itemKey}`}
                         type='text' value={itemText} placeholder='Enter to-do here'

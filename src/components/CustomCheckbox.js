@@ -15,6 +15,7 @@ const CustomCheckBox = ({toDoChecked, itemKey, setChangedToDoItem, setToDoChecke
 	return (
     <label htmlFor={`check${itemKey}`} >
         <button
+            data-test='to-do-list-item-checkbox'
             type='button'
             id={`check${itemKey}`}
             style={{backgroundColor: '#fff', border: '1px solid #fff'}}
