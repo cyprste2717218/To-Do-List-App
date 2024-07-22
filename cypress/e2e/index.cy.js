@@ -4,11 +4,11 @@ describe('index page', () => {
   })
 
   it('the h1 contains the correct text', () => {
-    cy.get("[data-test='hero-heading']").contains('To-Dos')
+    cy.getByData("hero-heading").contains('To-Dos')
   })
   it("adds a new to-do list item", () => {
-    cy.get("[data-test='add-to-do-button']").click()
-    cy.get("[data-test='to-do-list-item-text-box']").should('be.empty')
+    cy.getByData("add-to-do-button").click()
+    cy.getByData("to-do-list-item-text-box").should('be.empty')
   })
 
   
