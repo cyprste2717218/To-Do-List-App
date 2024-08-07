@@ -13,6 +13,7 @@
 Cypress.Commands.add("getByData", (selector) => {
   return cy.get(`[data-test=${selector}]`)
 })
+
 //
 //
 // -- This is a child command --
