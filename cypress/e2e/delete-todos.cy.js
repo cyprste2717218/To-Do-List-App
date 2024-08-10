@@ -46,7 +46,6 @@ describe('User can complete operations related to deleting to-dos', () => {
 	
 	})
 	
-	
 	it('User can delete completed to-dos when ordered by completion', () => {
 	
 		cy.getByData("add-to-do-button").click()
@@ -128,13 +127,191 @@ describe('User can complete operations related to deleting to-dos', () => {
 
 	})
 	
-	
-	it('User can delete all to-dos', () => {
-	
+})
+
+describe('User can delete all to-dos', () => {
+	it('User can delete all to-dos (when some to-dos are checked and ordered)', () => {
+
+		cy.validateSortingEnabled()
+
+		cy.addSampleToDosWithText()
+		cy.validateSampleAddedToDos()
+
+		// checking to-dos and validating this
+		cy.getByData("to-do-list-item-checkbox")
+			.eq(0)
+			.click()
+		cy.getByData("to-do-list-item-checkbox")
+			.eq(1)
+			.click()
+
+        cy.validateIsChecked(1)
+        cy.validateIsChecked(2)
+
+		// delete all to-dos and validate this
+		cy.getByData("more-options-elipsis-button")
+			.click()
+		cy.getByData("off-canvas-drawer")
+			.should('exist')
+		cy.getByData('delete-all-to-dos-button')
+			.click()
+
+		cy.getByData('to-do-list-item').should('have.length', 0)
+
+
 		
 
 	})
 
+	it('User can delete all to-dos (when some to-dos are checked and unordered)', () => {
+		
+		cy.setSortingDisabled()
+
+		cy.addSampleToDosWithText()
+		cy.validateSampleAddedToDos()
+
+		// checking to-dos and validating this
+		cy.getByData("to-do-list-item-checkbox")
+			.eq(0)
+			.click()
+		cy.getByData("to-do-list-item-checkbox")
+			.eq(1)
+			.click()
+
+        cy.validateIsChecked(1)
+        cy.validateIsChecked(2)
+
+		// delete all to-dos and validate this
+		cy.getByData("more-options-elipsis-button")
+		.click()
+		cy.getByData("off-canvas-drawer")
+			.should('exist')
+		cy.getByData('delete-all-to-dos-button')
+			.click()
+
+		cy.getByData('to-do-list-item').should('have.length', 0)
+
+	})
+
+	it('User can delete all to-dos (when no to-dos are checked and ordered)', () => {
+		
+		cy.validateSortingEnabled()
+
+		cy.addSampleToDosWithText()
+		cy.validateSampleAddedToDos()
+
+		// validating no to-dos are checked
+		cy.validateIsNotChecked(1)
+        cy.validateIsNotChecked(2)
+		cy.validateIsNotChecked(3)
+		
+		
+		// delete all to-dos and validate this
+		cy.getByData("more-options-elipsis-button")
+		.click()
+		cy.getByData("off-canvas-drawer")
+			.should('exist')
+		cy.getByData('delete-all-to-dos-button')
+			.click()
+
+		cy.getByData('to-do-list-item').should('have.length', 0)
+
+	})
+
+	it('User can delete all to-dos (when no to-dos are checked and unordered)', () => {
+
+		cy.setSortingDisabled()
+
+		cy.addSampleToDosWithText()
+		cy.validateSampleAddedToDos()
+
+		// validating no to-dos are checked
+		cy.validateIsNotChecked(1)
+        cy.validateIsNotChecked(2)
+		cy.validateIsNotChecked(3)
+		
+		
+		// delete all to-dos and validate this
+		cy.getByData("more-options-elipsis-button")
+		.click()
+		cy.getByData("off-canvas-drawer")
+			.should('exist')
+		cy.getByData('delete-all-to-dos-button')
+			.click()
+
+		cy.getByData('to-do-list-item').should('have.length', 0)
+
+	})
+
+	it('User can delete all to-dos (when all to-dos are checked and ordered)', () => {
+
+		cy.validateSortingEnabled()
+
+		cy.addSampleToDosWithText()
+		cy.validateSampleAddedToDos()
+
+		
+		// checking to-dos and validating this
+		cy.getByData("to-do-list-item-checkbox")
+			.eq(0)
+			.click()
+		cy.getByData("to-do-list-item-checkbox")
+			.eq(1)
+			.click()
+		cy.getByData("to-do-list-item-checkbox")
+			.eq(2)
+			.click()
+
+        cy.validateIsChecked(1)
+        cy.validateIsChecked(2)
+		cy.validateIsChecked(3)
+
+		// delete all to-dos and validate this
+		cy.getByData("more-options-elipsis-button")
+		.click()
+		cy.getByData("off-canvas-drawer")
+			.should('exist')
+		cy.getByData('delete-all-to-dos-button')
+			.click()
+
+		cy.getByData('to-do-list-item').should('have.length', 0)
+
+	})
+
+	it('User can delete all to-dos (when all to-dos are checked and unordered)', () => {
+
+		cy.setSortingDisabled()
+
+		cy.addSampleToDosWithText()
+		cy.validateSampleAddedToDos()
+
+		// checking to-dos and validating this
+		cy.getByData("to-do-list-item-checkbox")
+			.eq(0)
+			.click()
+		cy.getByData("to-do-list-item-checkbox")
+			.eq(1)
+			.click()
+		cy.getByData("to-do-list-item-checkbox")
+			.eq(2)
+			.click()
+
+        cy.validateIsChecked(1)
+        cy.validateIsChecked(2)
+		cy.validateIsChecked(3)
+
+		// delete all to-dos and validate this
+		cy.getByData("more-options-elipsis-button")
+		.click()
+		cy.getByData("off-canvas-drawer")
+			.should('exist')
+		cy.getByData('delete-all-to-dos-button')
+			.click()
+
+		cy.getByData('to-do-list-item').should('have.length', 0)
+
+
+	})
 
 })
 
