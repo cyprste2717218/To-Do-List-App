@@ -1,7 +1,7 @@
 
 describe('adding to-do tests', () => {
 
-    it('User can add to-dos', () => {
+    it('User can add and edit to-dos which are re-ordered automatically when checked', () => {
         // navigate to localhost
         cy.visit('http://localhost:3000/')
 
@@ -65,8 +65,19 @@ describe('adding to-do tests', () => {
             .eq(2)
             .click()
         
+        // check intended to-do items are checked
+        cy.validateIsChecked(1)
+        cy.validateIsChecked(3)
+
+        // check to-do item order is re-arranged to order checked to-dos before unchecked to-dos
         cy.getByData("to-do-list-item-checkbox")
             .eq(0)
+            .should('have.attr', 'aria-checked', 'true')
+
+        cy.getByData("to-do-list-item-checkbox")
+            .eq(1)
+            .should('have.attr', 'aria-checked', 'true')
+
     
         
         
