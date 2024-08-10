@@ -47,7 +47,10 @@ describe('User can complete operations related to deleting to-dos', () => {
 	})
 	
 	it('User can delete completed to-dos when ordered by completion', () => {
-	
+		
+		// validating ordering by completion toggle is enabled
+		cy.validateSortingEnabled()
+
 		cy.getByData("add-to-do-button").click()
         cy.getByData("add-to-do-button").click()
         cy.getByData("add-to-do-button").click()
@@ -78,20 +81,6 @@ describe('User can complete operations related to deleting to-dos', () => {
         cy.getByData("to-do-list-item-text-box")
             .eq(2)
             .should('have.value', 'Take out the rubbish')
-
-		// validating ordering by completion toggle is enabled
-		cy.getByData("more-options-elipsis-button")
-			.click()
-		
-		cy.getByData("off-canvas-drawer")
-			.should('exist')
-		cy.getByData("sorting-by-completion-button")
-			.should('exist')
-			.should('have.attr', 'aria-checked', 'true')
-
-	
-		cy.get('body').click('topRight');
-		cy.getByData("off-canvas-drawer").should('not.be.visible');
 
 		// checking to-dos and validating this
 		cy.getByData("to-do-list-item-checkbox")
