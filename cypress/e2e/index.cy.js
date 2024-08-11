@@ -1,4 +1,4 @@
-describe('initial loading tests', () => {
+describe('checking all expected UI elements rendered', () => {
 
   it('Navbar exists', () => {
     cy.getByData("to-do-app-header").should('exist')
