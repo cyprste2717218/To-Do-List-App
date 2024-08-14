@@ -6,7 +6,7 @@ import deleteAllToDos from '../utilities/deleteAllToDos';
 
 const DeleteAllToDosButton = ({setAllToDos, allToDos}) => {
     return (
-        <div>
+        <div data-test="delete-all-to-dos-button">
 
             <button style={{color: '#000'}} id='deleteAllToDosButton' type='submit' onClick={() => deleteAllToDos(setAllToDos, allToDos)}>
                 Delete All To-Dos

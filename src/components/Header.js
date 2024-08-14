@@ -4,7 +4,7 @@ import MoreOptionsButton from './MoreOptionsButton';
 
 const Header = ({handleShow}) => {
     return (
-        <div style={{
+        <div data-test='to-do-app-header' style={{
             width: '100vw', height: '100px', backgroundColor: '#ADD8E6',
             display: 'flex', flexDirection: 'row', position: 'sticky', top: '0'
       }}
@@ -12,7 +12,7 @@ const Header = ({handleShow}) => {
 
             <div style={{display: 'flex', justifyContent: 'left', width: '80vw', paddingLeft: '30px', color: '#fff'}}>
                 <div style={{marginTop: 'auto', marginBottom: 'auto'}}>
-                    <h1>To-Dos</h1>
+                    <h1 data-test="hero-heading" >To-Dos</h1>
                 </div>
 
             </div>
