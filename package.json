@@ -15,7 +15,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^3.0.1",
     "react-switch": "^7.0.0",
     "web-vitals": "^2.1.4"
   },
@@ -25,26 +25,21 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "cy:open": "cypress open",
-
     "cy:open:mobile": "cypress open --config viewportWidth=375,viewportHeight=667",
     "cy:run:mobile": "npm run cy:run:mobile:chrome && npm run cy:run:mobile:edge && npm run cy:run:mobile:electron",
     "cy:open:tablet": "cypress open --config viewportWidth=768,viewportHeight=1024",
     "cy:run:tablet": "npm run cy:run:tablet:chrome && npm run cy:run:tablet:edge && npm run cy:run:tablet:electron",
     "cy:open:desktop": "cypress open --config viewportWidth=1920,viewportHeight=1080",
     "cy:run:desktop": "npm run cy:run:desktop:chrome && npm run cy:run:desktop:edge && npm run cy:run:desktop:electron",
-
     "cy:run:mobile:chrome": "cypress run --browser chrome --config viewportWidth=375,viewportHeight=667",
     "cy:run:mobile:edge": "cypress run --browser edge --config viewportWidth=375,viewportHeight=667",
     "cy:run:mobile:electron": "cypress run --browser electron --config viewportWidth=375,viewportHeight=667",
-
     "cy:run:tablet:chrome": "cypress run --browser chrome --config viewportWidth=768,viewportHeight=1024",
     "cy:run:tablet:edge": "cypress run --browser edge --config viewportWidth=768,viewportHeight=1024",
     "cy:run:tablet:electron": "cypress run --browser electron --config viewportWidth=768,viewportHeight=1024",
-
     "cy:run:desktop:chrome": "cypress run --browser chrome --config viewportWidth=1920,viewportHeight=1080",
     "cy:run:desktop:edge": "cypress run --browser edge --config viewportWidth=1920,viewportHeight=1080",
     "cy:run:desktop:electron": "cypress run --browser electron --config viewportWidth=1920,viewportHeight=1080",
-
     "e2e:commands": "npm run cy:run:mobile && npm run cy:run:tablet && npm run cy:run:desktop",
     "test:e2e": "docker run --rm -it -v \"%cd%:/e2e\" -w /e2e --entrypoint=\"\" cypress/included:13.13.1 sh -c \"npm run start-wait && npx cypress install && npm run e2e:commands \"",
     "cypress:run": "cypress run",
