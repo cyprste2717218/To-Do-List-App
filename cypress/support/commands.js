@@ -75,6 +75,10 @@ Cypress.Commands.add('validateSortingEnabled', () => {
   cy.getByData("sorting-by-completion-button")
   .should('exist')
   .should('have.attr', 'aria-checked', 'true')
+  
+  cy.getByData("sorting-by-completion-button")
+			.click()
+      .click()
 
   cy.get('body').click('topRight');
   cy.getByData("off-canvas-drawer").should('not.be.visible');
