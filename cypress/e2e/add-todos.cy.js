@@ -3,7 +3,7 @@ describe('adding to-do tests', () => {
 
     it('User can add and edit to-dos which are re-ordered automatically when checked', () => {
         // navigate to localhost
-        cy.visit('http://localhost:3000/')
+        cy.visit('http://localhost:5173/')
 
         // add to-dos
         cy.getByData("add-to-do-button").click()
