@@ -1,11 +1,14 @@
 function checkAndClearLocalStorage() {
 	function getRandomKeyValuePair() {
-		const numEntries = localStorage.length;
+		console.log('numEntries:', numEntries);
 		if (numEntries === 0) {
 			return null; // No entries in localStorage
 		}
 
 		const randomIndex = Math.floor(Math.random() * numEntries); // Generate random index
+		if (randomIndex === 'NaN') {
+			randomIndex = 1;
+		}
 		const key = localStorage.key(randomIndex);
 		const value = localStorage.getItem(key);
 		return {key, value}; // Return the key-value pair at the random index
