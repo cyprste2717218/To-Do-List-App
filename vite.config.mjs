@@ -8,7 +8,7 @@ export default defineConfig(() => {
     },
     plugins: [react()],
     server: {
-      hmr: false,
+      hmr: false, // Disable HMR
     },
   };
 });
