@@ -19,7 +19,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "vite",
+    "start": "vite --host",
     "start-wait": "npm start & wait-on http://localhost:5173",
     "build": "vite build",
     "serve": "vite preview",
@@ -41,7 +41,7 @@
     "cy:run:desktop:edge": "cypress run --browser edge --config viewportWidth=1920,viewportHeight=1080",
     "cy:run:desktop:electron": "cypress run --browser electron --config viewportWidth=1920,viewportHeight=1080",
     "e2e:commands": "npm run cy:run:mobile && npm run cy:run:tablet && npm run cy:run:desktop",
-    "test:e2e": "docker run --rm -it -v \"%cd%:/e2e\" -w /e2e --entrypoint=\"\" cypress/included:13.13.3 sh -c \"npm run start-wait && npm install && npm cache clean --force && npx cypress install && npm run e2e:commands \"",
+    "test:e2e": "docker run --rm -it -v \"%cd%:/e2e\" -w /e2e --entrypoint=\"\" cypress/included:13.13.1 sh -c \"npm cache clean --force && npm install && npx cypress install && npm run start-wait && npm run e2e:commands \"",
     "cypress:run": "cypress run",
     "prepare": "husky"
   },
