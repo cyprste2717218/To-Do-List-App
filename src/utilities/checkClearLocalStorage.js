@@ -1,6 +1,5 @@
 function checkAndClearLocalStorage() {
 	function getRandomKeyValuePair() {
-		console.log('numEntries:', numEntries);
 		if (numEntries === 0) {
 			return null; // No entries in localStorage
 		}
