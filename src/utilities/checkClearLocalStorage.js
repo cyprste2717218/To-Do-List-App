@@ -7,7 +7,7 @@ function checkAndClearLocalStorage() {
 
 		const randomIndex = Math.floor(Math.random() * numEntries); // Generate random index
 		if (randomIndex === 'NaN') {
-			randomIndex = 1;
+			randomIndex = `1`;
 		}
 		const key = localStorage.key(randomIndex);
 		const value = localStorage.getItem(key);
